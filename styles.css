@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Leokadia";
+    font-style: normal;
+    font-weight: 400;
+    src: url(./flask_BGITU/fonts/leokadiadeco.woff) format("woff"),
+        url(./flask_BGITU/fonts/leokadiadeco.ttf) format("ttf");
+}
+
+body{
+font-family: Georgia;}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background: #146356;
+    height: 50px;
+}
+
