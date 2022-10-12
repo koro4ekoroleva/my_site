@@ -3,9 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <title>Nyan Cat</title>
-    <style> body{background: url(https://64.media.tumblr.com/230e7e2aed827d21f8acf7f31442f826/tumblr_ogm3yfiTbk1u7i9feo1_1280.gif); color: white;}</style>
+    <style>
+    body{background: url(https://64.media.tumblr.com/230e7e2aed827d21f8acf7f31442f826/tumblr_ogm3yfiTbk1u7i9feo1_1280.gif);
+    color: white;
+    }
+    @font-face {
+        font-family: "Leokadia";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(./flask_BGITU/fonts/leokadia.woff) format("woff"),
+            url(./flask_BGITU/fonts/leokadia.ttf) format("ttf"),
+            url(./flask_BGITU/fonts/leokadia.eot) format("eot");
+    }
+    header {
+        font-family: Leokadia, Georgia;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        background: #00004d;
+        height: 50px;
+    }
+    .menu {
+        flex-grow: 1;
+    }
+    .logo {
+        margin-right: 30px;
+    }
+    .menu ul {
+      display: flex;
+      flex-flow: row nowrap;
+      margin: 2px 0 0;
+      padding: 0;
+      font-size: 16px;
+      line-height: 18px;
+      list-style: none;
+    }
+    .menu li {
+      margin-right: 20px;
+    }
+    .menu li:last-child {
+      margin-right: 0;
+    }
+    .menu a,
+    .menu .active {
+      display: block;
+      padding: 8px 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.27em;
+    }
+    .menu a {
+      color: #9D9DD9;
+      text-decoration: none;
+    }
+    .menu .active {
+      padding-right: calc(10px - 0.27em);
+      color: #00004d;
+      background-color: #9D9DD9;
+      border-radius: 8px;
+    }
+    </style>
 </head>
-<body>
+<body link="white" vlink="white">
+<header>
+    <div class="logo">
+          <img
+            src="https://cdn-user-icons.flaticon.com/81670/81670463/1665587350527.svg?token=exp=1665588250~hmac=b292f18f6193a3dff38a9f2553e893a9"
+            width="50"
+            height="50"
+          />
+    </div>
+    <nav class="menu">
+    <ul>
+            <li> <a href="http://127.0.0.1:5000/">Рецепты</a></li>
+            <li><a href="http://127.0.0.1:5000/help/">Помощь</a></li>
+            <li><span class="active">Нян кэт</span></li>
+    </ul>
+    </nav>
+</header>
 <center><h1><b>Nyan Cat</b></h1>
 <img src="https://wiki.soiro.ru/images/Nyan-cat-png-transparent-images-175332-9145060.gif" HEIGHT = 400 WIDTH = 875></center>
 <p>«Nyan Cat» — видеоролик, загруженный на видеохостинг YouTube в апреле 2011 года и ставший популярным интернет-мемом.
@@ -36,9 +112,6 @@
     Леди Гагу, Гая Фокса, Гитлера и других.</p>
 <p>Существует даже <A HREF="https://www.nyan.cat/">сайт</A>, посвящённый Nyan Cat. На сайте воспроизводится анимация
     Nyan Cat и отображается время, проведённое пользователем на сайте. Ну и куда же без характерной музыки. </p>
-<p>Доступны:
-    <UL>
-        <LI><A HREF="http://127.0.0.1:5000/">Начальная страница</A>
-		<LI><A HREF="http://127.0.0.1:5000/help/">Помощь</A></UL></p>
+
 </body>
 </html>

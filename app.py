@@ -20,6 +20,9 @@ def help():
 def NyanCat():
     return render_template('Nyan Cat.html', title="Nyan Cat")
 
+@app.route('/spagetti/')
+def spagetti():
+    return render_template('spagetti.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
