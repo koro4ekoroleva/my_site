@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% if title == 'PI' %}
-    <title>ПИ</title>
-    {% else %}
-    <title>Помощь</title>
-    {% endif %}
-</head>
-<body>
+
+{% extends "base.html" %}
+{% block content %}
+
+<A HREF="http://127.0.0.1:5000/">Начальная страница</A>
+<A HREF="http://127.0.0.1:5000/Nyan%20Cat/">Нян кэт</A>
 {% if title == 'PI' %}
 <h1> Помощь вам не поможет</h1>
 {% elif title == '2014' %}
@@ -16,9 +11,5 @@
 {% else %}
     <h1>Помощь уже едет </h1>
     {% endif %}
-<p>Доступны:
-    <UL>
-        <LI><A HREF="http://127.0.0.1:5000/">Начальная страница</A>
-		<LI><A HREF="http://127.0.0.1:5000/Nyan%20Cat/">Нян кэт</A></UL></p>
-</body>
-</html>
+
+{% endblock %}
