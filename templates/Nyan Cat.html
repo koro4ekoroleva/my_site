@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Nyan Cat</title>
-    <style> body{background: url(https://64.media.tumblr.com/230e7e2aed827d21f8acf7f31442f826/tumblr_ogm3yfiTbk1u7i9feo1_1280.gif); color: white;}</style>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+<style> body{background: url(https://64.media.tumblr.com/230e7e2aed827d21f8acf7f31442f826/tumblr_ogm3yfiTbk1u7i9feo1_1280.gif); color: white;}</style>
+<A HREF="http://127.0.0.1:5000/">Начальная страница</A>
+<A HREF="http://127.0.0.1:5000/about/">Обо мне</A>
+<A HREF="http://127.0.0.1:5000/help/">Помощь</A>
 <center><h1><b>Nyan Cat</b></h1>
 <img src="https://wiki.soiro.ru/images/Nyan-cat-png-transparent-images-175332-9145060.gif" HEIGHT = 400 WIDTH = 875></center>
 <p>«Nyan Cat» — видеоролик, загруженный на видеохостинг YouTube в апреле 2011 года и ставший популярным интернет-мемом.
@@ -40,5 +38,4 @@
     <UL>
         <LI><A HREF="http://127.0.0.1:5000/">Начальная страница</A>
 		<LI><A HREF="http://127.0.0.1:5000/help/">Помощь</A></UL></p>
-</body>
-</html>
+{% endblock %}

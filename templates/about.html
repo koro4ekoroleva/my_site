@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    {%extends "base.html" %}
-    {% block content %}
-    {{ super() }}
+{% extends "base.html" %}
+{% block content %}
+<A HREF="http://127.0.0.1:5000/">Начальная страница</A>
+<A HREF="http://127.0.0.1:5000/Nyan%20Cat/">Нян кэт</A>
+<A HREF="http://127.0.0.1:5000/help/">Помощь</A>
     <h1> Тут будет о программе</h1>
-    {% endblock %}
-</body>
-</html>
+{% endblock %}

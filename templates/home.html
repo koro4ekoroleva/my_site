@@ -1,29 +1,18 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <title>Начальная страница</title>
-
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+<A HREF="http://127.0.0.1:5000/">Начальная страница</A>
+<A HREF="http://127.0.0.1:5000/Nyan%20Cat/">Нян кэт</A>
+<A HREF="http://127.0.0.1:5000/about/">Обо мне</A>
+<A HREF="http://127.0.0.1:5000/help/">Помощь</A>
 <header>
     <div class="logo">
         <img src="images/header-title.png"
         width="30" height="30"/>
-    </div>
-
-    <ul>
-            <li><a href="http://127.0.0.1:5000/"><font color="F3C892" face="Leokadia" size="5">Рецепты</font></a></li>
-            <li><a href="http://127.0.0.1:5000/help/"><font color="FFF1BD" face="Leokadia" size="5">Помощь</font></a></li>
-            <li><a href="http://127.0.0.1:5000/Nyan%20Cat/"><font color="FFF1BD" face="Leokadia" size="5">Нян кэт</font></a></li>
-    </ul>
-
 </header>
 <center> <h1>Рецепты</h1>
     <p>Тут что-то будет</p>
 </center>
-</body>
-</html>
+{% endblock %}
 
 
 
