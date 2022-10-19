@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
+    {% block title -%}
     <title>Начальная страница</title>
     <style>
     @font-face {
@@ -76,23 +77,24 @@
         text-decoration: none;
     }
     </style>
+    {% endblock %}
 </head>
 <body>
+{% block content -%}
 <header>
+    {%- block mainmenu -%}
     <div class="logo">
-          <img
-            src="https://cdn-user-icons.flaticon.com/81670/81670463/1665586048887.svg?token=exp=1665586971~hmac=7dc2bfeceddbefb0940a8e5591a28169"
-            width="50"
-            height="50"
-          />
+          <img src="img/logo.png" height="50" hspace="5"/>
     </div>
     <nav class="menu">
     <ul>
             <li><span class="active">Рецепты</span></li>
             <li><a href="http://127.0.0.1:5000/help/">Помощь</a></li>
             <li><a href="http://127.0.0.1:5000/Nyan%20Cat/">Нян кэт</a></li>
+            <li><a href="http://127.0.0.1:5000/about/">О сайте</a></li>
     </ul>
     </nav>
+    {% endblock mainmenu -%}
 </header>
 <center> <h1>Рецепты</h1>
     <div class="recipe">
@@ -100,6 +102,7 @@
         <font color="146356" size="5" ><a href="http://127.0.0.1:5000/spagetti/">Спагетти карбонара с красным луком</a></font>
     </div>
 </center>
+{% endblock -%}
 </body>
 </html>
 

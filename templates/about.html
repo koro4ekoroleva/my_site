@@ -1,7 +1,17 @@
-{% extends "base.html" %}
+{% extends "home.html" %}
 {% block content %}
-<A HREF="http://127.0.0.1:5000/">Начальная страница</A>
-<A HREF="http://127.0.0.1:5000/Nyan%20Cat/">Нян кэт</A>
-<A HREF="http://127.0.0.1:5000/help/">Помощь</A>
-    <h1> Тут будет о программе</h1>
+<header>
+    <div class="logo">
+          <img src="img/logo.png" height="50" hspace="5"/>
+    </div>
+<nav class="menu">
+<ul>
+    <li> <a href="http://127.0.0.1:5000/">Рецепты</a></li>
+    <li><a href="http://127.0.0.1:5000/help/">Помощь</a></li>
+    <li><a href="http://127.0.0.1:5000/Nyan%20Cat/">Нян кэт</a></li>
+    <li><span class="active">О сайте</span></li>
+</ul>
+</nav>
+</header>
+    <h1> Тут будет о сайте</h1>
 {% endblock %}

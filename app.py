@@ -30,9 +30,11 @@ def NyanCat():
 def about():
     return render_template('about.html', title="about", menu=menu)
 
+
 @app.route('/spagetti/')
 def spagetti():
-    return render_template('spagetti.html')
+    return render_template('spagetti.html', menu=menu)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
