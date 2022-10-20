@@ -1,14 +1,14 @@
 from flask import Flask, render_template
 from random import choice
-"""    // <link href="./my_site/styles.css" rel="stylesheet" /> 
-    <div class="menu">"""
 
 menu = [{"title": 'Главная', "url": "hello"},
         {"title": 'Помощь', "url": "help"},
         {"title": "О программе", "url": "about"},
-        {"title": "Nyan Cat", "url": "NyanCat"}]
+        {"title": "Nyan Cat", "url": "NyanCat"},
+        {"title": "Разработчик", "url": "me"}]
 
 app = Flask(__name__)
+
 
 @app.route('/')
 def hello():
@@ -35,6 +35,10 @@ def about():
 def spagetti():
     return render_template('spagetti.html', menu=menu)
 
+
+@app.route('/me/')
+def me():
+    return render_template('me.html', menu=menu)
 
 if __name__ == '__main__':
     app.run(debug=True)

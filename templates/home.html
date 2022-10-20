@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <link type="text/css" href="{{url_for('static', filename='styles.css')}}" rel="stylesheet" />
+    <link type="text/css" href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
     {% block title -%}
     <title>Начальная страница</title>
     {% endblock %}
@@ -12,7 +12,7 @@
 <header>
     {%- block mainmenu -%}
     <div class="logo">
-          <img src="img/logo.png" height="50" hspace="5"/>
+          <img src="{{url_for('static', filename='img/logo.png')}}" />
     </div>
     <nav class="menu">
     <ul>
@@ -20,6 +20,7 @@
             <li><a href="http://127.0.0.1:5000/help/">Помощь</a></li>
             <li><a href="http://127.0.0.1:5000/Nyan%20Cat/">Нян кэт</a></li>
             <li><a href="http://127.0.0.1:5000/about/">О сайте</a></li>
+            <li><a href="http://127.0.0.1:5000/me/">Разработчик</a></li>
     </ul>
     </nav>
     {% endblock mainmenu -%}
