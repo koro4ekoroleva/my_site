@@ -3,9 +3,9 @@
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url(./flask_BGITU/fonts/leokadia.woff) format("woff"),
-            url(./flask_BGITU/fonts/leokadia.ttf) format("ttf"),
-            url(./flask_BGITU/fonts/leokadia.eot) format("eot");
+        src: {url_for('static', filename='fonts/leokadia.woff')} format("woff"),
+            {url_for('static', filename='fonts/leokadia.ttf')} format("ttf"),
+            {url_for('static', filename='fonts/leokadia.eot')} format("eot"),
     }
     body{
         font-family: Georgia;
@@ -62,6 +62,7 @@
       background-color: #A3DA8D;
       border-radius: 8px;
     }
+
     .recipe {
         flex-grow: 1;
         padding-right: calc(10px - 0.27em);
@@ -72,4 +73,20 @@
     .recipe .name {
         display: flex;
         text-decoration: none;
+    }
+
+    .table {
+    border-collapse: collapse;
+   /*убираем пустые промежутки между ячейками*/
+    border: 1px solid grey;
+   /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+    width :  50% ;
+    }
+    .th  {
+    height :  70px ;
+    background-color : #FFF1BD
+    }
+    .td  {
+    text-align :  left ;
+    vertical-align : middle
     }
