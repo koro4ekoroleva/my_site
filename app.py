@@ -1,5 +1,9 @@
+import os
+
 from flask import Flask, render_template
 from random import choice
+
+from config import Config
 
 menu = [{"title": 'Главная', "url": "hello"},
         {"title": 'Помощь', "url": "help"},
@@ -8,6 +12,9 @@ menu = [{"title": 'Главная', "url": "hello"},
         {"title": "Разработчик", "url": "me"}]
 
 app = Flask(__name__)
+
+app.config.from_object(Config)
+app.config.update(dict(DATABASE=os.path.join(app.root_path, 'db.db')))
 
 
 @app.route('/')
@@ -41,6 +48,8 @@ def me():
     return render_template('me.html', menu=menu)
 
 if __name__ == '__main__':
+    print(*app.config.items(), sep='\n')
+    print('sadf')
     app.run(debug=True)
 
 
