@@ -12,9 +12,9 @@
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url(./flask_BGITU/fonts/leokadia.woff) format("woff"),
-            url(./flask_BGITU/fonts/leokadia.ttf) format("ttf"),
-            url(./flask_BGITU/fonts/leokadia.eot) format("eot");
+        src: {url_for('static', filename='fonts/leokadia.woff')} format("woff"),
+            {url_for('static', filename='fonts/leokadia.ttf')} format("ttf"),
+            {url_for('static', filename='fonts/leokadia.eot')} format("eot"),
     }
     header {
         font-family: Leokadia, Georgia;

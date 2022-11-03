@@ -19,13 +19,12 @@
         justify-content: flex-start;
         align-items: center;
         background: #146356;
-        height: 50px;
     }
     .menu {
         flex-grow: 1;
     }
     .logo {
-        margin-right: 30px;
+        margin-right: 25px;
         height=50px;
         weight=50px;
         object-fit:fill;
