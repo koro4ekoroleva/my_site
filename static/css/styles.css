@@ -83,7 +83,8 @@
     margin: 10px auto;
     }
     .th  {
-    border: 1px solid grey;
+    border-collapse: collapse;
+    border: 1px #146356;
     height :  70px ;
     background-color : #FFF1BD;
     }
