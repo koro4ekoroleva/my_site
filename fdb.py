@@ -12,7 +12,7 @@ def connect_db():
 def create_db():
     '''Вспомогательная функция по созданию БД'''
     db = connect_db()
-    with app.open_resource('sq_db.sql', mode='r') as f:
+    with app.open_resource('sql_db.sql', mode='r') as f:
         db.cursor().executescript(f.read())
     db.commit()
     db.close()
