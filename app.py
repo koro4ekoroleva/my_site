@@ -47,6 +47,7 @@ def spagetti():
 def me():
     return render_template('me.html', menu=menu)
 
+
 if __name__ == '__main__':
     print(*app.config.items(), sep='\n')
     print('sadf')
