@@ -69,23 +69,26 @@
         background-color: #FFF1BD;
 
     }
-    .recipe .name {
+
+    .me {
         display: flex;
-        text-decoration: none;
+    }
+
+    .me_img {
+    padding: 0% 20% 0% 10%;
     }
 
     .table {
     border-collapse: collapse;
    /*убираем пустые промежутки между ячейками*/
-    border: 1px #146356;
    /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
-    width :  600px ;
-    margin: 10px auto;
+    width :  80% ;
+    margin: 30px auto;
+
     }
     .th  {
-    border-collapse: collapse;
     border: 1px #146356;
-    height :  70px ;
+    height :  60px ;
     background-color : #FFF1BD;
     }
     .td  {
