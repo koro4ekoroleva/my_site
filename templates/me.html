@@ -14,21 +14,20 @@
     </ul>
     </nav>
 </header>
-<center><h1>Это я</h1></center>
-<div class="me">
-    <div class="me_img">
-<img src="{{url_for('static', filename='img/me.jpg')}}"/>
-    </div>
-<center>
-<h2>Кузина Лиза</h2>
-<h2>Средний балл: 5</h2>
-<h2>Мои оценки</h2>
+<center><h1>Это я</h1>
+<div class="me_photo">
+<img src="{{url_for('static', filename='img/me.jpg')}}"  /></div>
+<div class="me_photo">
+    <center><h2>Кузина Лиза</h2>
+<h2>Средний балл: 5</h2></center>
+<div class="table">
     <table>
-        <div class="table">
+        <div class="th">
         <tr>
-                <th><div class="th">Дисциплина</div></th>
-                <th><div class="th">Оценка</div></th>
+                <th>Дисциплина</th>
+                <th>Оценка</th>
         </tr>
+        </div>
         <div class="td">
         <tr>
                 <td>Математика</td>
@@ -57,8 +56,8 @@
                 <td>отлично</td>
             </tr>
         </div>
-        </div>
     </table>
+</div>
 </center>
 </div>
 {% endblock %}

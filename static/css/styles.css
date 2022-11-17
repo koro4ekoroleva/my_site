@@ -96,3 +96,7 @@
     text-align :  center ;
     vertical-align : middle;
     }
+
+    .me_photo  {
+    display: flex;
+    }

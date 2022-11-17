@@ -19,4 +19,21 @@ def create_db():
     pass
 
 
+class whatDB:
+    def __init__(self, db):
+        self.__db = db
+        self.__cur = db.cursor()
+    def setMenu(self, title, url):
+        try:
+            self.__cur.execute('INSERT INTO mainmenu VALUES(NULL, ?, ?)', (title, url))
+            self.__db.commit()
+        except sqlite3.Error as e:
+            print('Ошибка добавления в БД', e)
+            return  False
+        return True
 
+
+if __name__ == '__main__':
+    db = connect_db()
+    db = whatDB(db)
+    print(db.setMenu('Разработчик', 'me'))
