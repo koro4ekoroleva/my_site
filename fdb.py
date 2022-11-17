@@ -29,11 +29,24 @@ class whatDB:
             self.__db.commit()
         except sqlite3.Error as e:
             print('Ошибка добавления в БД', e)
-            return  False
+            return False
         return True
+    def delMenu(self, id=0):
+        try:
+            if id == 0:
+                self.__cur.execute('DELETE FROM mainmenu')
+            else:
+                self.__cur.execute(f"DELETE FROM mainmenu") # сия фигня должна удалять по id
+            self.__db.commit()
+        except sqlite3.Error as e:
+            print('Ошибка удаления из БД', e)
+            return False
+        return True
+
 
 
 if __name__ == '__main__':
     db = connect_db()
     db = whatDB(db)
     print(db.setMenu('Разработчик', 'me'))
+    print(db.delMenu(id=5))
