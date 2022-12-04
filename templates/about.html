@@ -6,11 +6,9 @@
     </div>
 <nav class="menu">
 <ul>
-    <li> <a href="http://127.0.0.1:5000/">Рецепты</a></li>
-    <li><a href="http://127.0.0.1:5000/help/">Помощь</a></li>
-    <li><a href="http://127.0.0.1:5000/Nyan%20Cat/">Нян кэт</a></li>
-    <li><span class="active">О сайте</span></li>
-    <li><a href="http://127.0.0.1:5000/me/">Разработчик</a></li>
+        {% for m in menu %}
+            <li><a href="{{url_for(m.url)}}">{{m.name}}</a></li>
+        {% endfor %}
 </ul>
 </nav>
 </header>

@@ -4,26 +4,24 @@
     <meta charset="UTF-8">
     <link type="text/css" href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
     {% block title -%}
-    <title>{{menu[title]}}</title>
+    <title>{{title}}</title>
     {% endblock %}
 </head>
 <body>
 {% block content -%}
 <header>
-    {%- block mainmenu -%}
+    {%- block menu -%}
     <div class="logo">
           <img src="{{url_for('static', filename='img/logo.png')}}" hspace="5"/>
     </div>
     <nav class="menu">
     <ul>
-            <li><span class="active">Рецепты</span></li>
-            <li><a href="//help/">Помощь</a></li>
-            <li><a href="//Nyan%20Cat/">Нян кэт</a></li>
-            <li><a href="//about/">О сайте</a></li>
-            <li><a href="//me/">Разработчик</a></li>
+        {% for m in menu %}
+            <li><a href="{{url_for(m.url)}}">{{m.name}}</a></li>
+        {% endfor %}
     </ul>
     </nav>
-    {% endblock mainmenu -%}
+    {% endblock menu -%}
 </header>
 <center> <h1>Рецепты</h1>
     <div class="recipe">
