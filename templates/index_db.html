@@ -1,0 +1,27 @@
+{% extends "home_db.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+    {% block title -%}
+    <title>{{title}}</title>
+    {% endblock %}
+</head>
+<body>
+{% block content -%}
+<header>
+    {%- block menu -%}
+    <div class="logo">
+          <img src="{{url_for('static', filename='img/logo.png')}}" hspace="5"/>
+    </div>
+    <nav class="menu">
+    <ul>
+        {% for m in menu %}
+            <li><a href="{{url_for(m.url)}}">{{m.title}}</a></li>
+        {% endfor %}
+    </ul>
+    </nav>
+    {% endblock menu -%}
+</header>
+</body>
+{% endblock %}

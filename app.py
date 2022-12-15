@@ -1,7 +1,7 @@
 import os
 import sqlite3
 
-from flask import Flask, render_template
+from flask import Flask, render_template, g
 from random import choice
 
 from config import Config
@@ -16,6 +16,16 @@ app = Flask(__name__)
 
 app.config.from_object(Config)
 app.config.update(dict(DATABASE=os.path.join(app.root_path, 'db.db')))
+
+def get_db():
+    if not hasattr(g, 'link_db'):
+        g.link_db = connect_db()
+    return g.link_db
+
+@app.teardown_appcontext
+def close_db(error):
+    if hasattr(g, 'link_db'):
+       g.link_db.close()
 
 
 @app.route('/')
@@ -48,6 +58,13 @@ def spagetti():
 def me():
     return render_template('me.html', menu=menu)
 
+
+@app.route('/index_db/')
+def index_db():
+    db = get_db()
+    return render_template('index_db.html', menu=menu)
+
+
 def connect_db():
     conn = sqlite3.connect(app.config['DATABASE'])
     conn.row_factory = sqlite3.Row
@@ -65,7 +82,6 @@ def create_db():
 
 if __name__ == '__main__':
     print(*app.config.items(), sep='\n')
-    print('sadf')
     app.run(debug=True)
 
 
