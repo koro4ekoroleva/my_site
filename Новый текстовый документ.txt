@@ -1,0 +1,89 @@
+html, body{
+        font-family: Georgia;
+        color: #146356;
+        face: "Leokadia"
+    }
+    header {
+        font-family: leokadia, Georgia;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        background: #146356;
+    }
+    menu {
+        flex-direction: row;
+        flex-grow: 1;
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 2px 0 0;
+        padding: 0;
+        font-size: 16px;
+        line-height: 18px;
+        list-style: none;
+    }
+    .logo {
+        margin-right: 25px;
+        height=50px;
+        weight=50px;
+        object-fit:fill;
+        object-position: 5px 20px;
+    }
+
+    .menu li {
+      margin-right: 20px;
+    }
+
+    .menu a {
+      color: #FFF1BD;
+      text-decoration: none;
+
+      padding: 8px 10px;
+      letter-spacing: 0.27em;
+    }
+    .menu .active {
+      padding-right: calc(10px - 0.27em);
+      color: #146356;
+      background-color: #A3DA8D;
+      border-radius: 8px;
+      padding: 8px 10px;
+      letter-spacing: 0.27em;
+    }
+
+
+
+    .recipe {
+        flex-grow: 1;
+        padding-right: calc(10px - 0.27em);
+        color: #146356;
+        background-color: #FFF1BD;
+
+    }
+
+    .me {
+        display: flex;
+    }
+
+    .me_img {
+    padding: 0% 20% 0% 10%;
+    display: flex;
+    }
+
+    .table {
+    border-collapse: collapse;
+   /*убираем пустые промежутки между ячейками*/
+   /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+    width :  80% ;
+    margin: 30px auto;
+
+    }
+    .th  {
+    border: 1px #146356;
+    height :  60px ;
+    background-color : #FFF1BD;
+    }
+    .td  {
+    border: 1px solid grey;
+    text-align :  center ;
+    vertical-align : middle;
+    }

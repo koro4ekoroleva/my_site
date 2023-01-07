@@ -7,60 +7,48 @@
             {url_for('static', filename='fonts/leokadia.ttf')} format("ttf"),
             {url_for('static', filename='fonts/leokadia.eot')} format("eot"),
     }
-    body{
+    html, body{
         font-family: Georgia;
         color: #146356;
         face: "Leokadia"
     }
-    header {
-        font-family: leokadia, Georgia;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        background: #146356;
-    }
-    .menu {
-        flex-grow: 1;
-    }
+ul.mainmenu {
+    font-family: leokadia, Georgia;
+	list-style: none;
+	background: #146356;
+	height: 60px;
+	margin: 0;
+	padding: 0;
+	color: #fdc073;
+	font-size: 20px;
+	overflow: hidden;
+}
+ul.mainmenu li {
+	float: left;
+	margin: 25px 25px 0px 0px;
+}
+ul.mainmenu li.last {float: right;}
+
+ul.mainmenu li a {
+	color: #FFF1BD;
+	text-decoration: none;
+	padding: 8px 10px;
+    letter-spacing: 0.27em;
+}
+ul.mainmenu li a:hover {
+	color: #FDA83D;
+}
+
+
+
+
+
     .logo {
-        margin-right: 25px;
-        height=50px;
-        weight=50px;
+        float: left;
+        margin: 10px 25px 0px 0px;
         object-fit:fill;
-        object-position: 5px 20px;
     }
-    .menu ul {
-      display: flex;
-      flex-flow: row nowrap;
-      margin: 2px 0 0;
-      padding: 0;
-      font-size: 16px;
-      line-height: 18px;
-      list-style: none;
-    }
-    .menu li {
-      margin-right: 20px;
-    }
-    .menu li:last-child {
-      margin-right: 0;
-    }
-    .menu a,
-    .menu .active {
-      display: block;
-      padding: 8px 10px;
-      letter-spacing: 0.27em;
-    }
-    .menu a {
-      color: #FFF1BD;
-      text-decoration: none;
-    }
-    .menu .active {
-      padding-right: calc(10px - 0.27em);
-      color: #146356;
-      background-color: #A3DA8D;
-      border-radius: 8px;
-    }
+
 
     .recipe {
         flex-grow: 1;
@@ -76,6 +64,7 @@
 
     .me_img {
     padding: 0% 20% 0% 10%;
+    display: flex;
     }
 
     .table {
@@ -97,6 +86,3 @@
     vertical-align : middle;
     }
 
-    .me_photo  {
-    display: flex;
-    }
