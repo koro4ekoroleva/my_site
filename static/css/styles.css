@@ -25,7 +25,7 @@ ul.mainmenu {
 }
 ul.mainmenu li {
 	float: left;
-	margin: 25px 25px 0px 0px;
+	margin: 20px 25px 0px 0px;
 }
 ul.mainmenu li.last {float: right;}
 
@@ -39,32 +39,36 @@ ul.mainmenu li a:hover {
 	color: #FDA83D;
 }
 
-
-
-
-
     .logo {
         float: left;
-        margin: 10px 25px 0px 0px;
+        margin: 5px 25px 0px 0px;
         object-fit:fill;
     }
 
-
-    .recipe {
-        flex-grow: 1;
-        padding-right: calc(10px - 0.27em);
+    .recipe{
         color: #146356;
         background-color: #FFF1BD;
+        position: relative
+    }
+
+    .recipe img {
+        flex-grow: 1;
 
     }
 
-    .me {
-        display: flex;
+    .recipe a{
+        text-decoration: none;
+        color: #146356;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        padding: 0% 0% 0% 1%
     }
 
     .me_img {
-    padding: 0% 20% 0% 10%;
     display: flex;
+    float: left;
     }
 
     .table {
@@ -75,13 +79,11 @@ ul.mainmenu li a:hover {
     margin: 30px auto;
 
     }
-    .th  {
-    border: 1px #146356;
+    .table th  {
     height :  60px ;
     background-color : #FFF1BD;
     }
-    .td  {
-    border: 1px solid grey;
+    .table td  {
     text-align :  center ;
     vertical-align : middle;
     }

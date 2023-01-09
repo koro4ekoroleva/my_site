@@ -8,7 +8,7 @@ from config import Config
 
 menu = [{"title": 'Главная', "url": "hello"},
         {"title": 'Помощь', "url": "help"},
-        {"title": "О программе", "url": "about"},
+        {"title": "О сайте", "url": "about"},
         {"title": "Разработчик", "url": "me"}]
 
 app = Flask(__name__)
@@ -34,7 +34,7 @@ def hello():
 
 @app.route('/help/')
 def help():
-    sp = ['PI', '2014', '']
+    sp = ['PI', '2007', '']
     return render_template('help.html', title=choice(sp), menu=menu)
 
 

@@ -1,21 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 {{ super() }}
-<center><h1>Это я</h1>
-<div class="me_photo">
+<center><h1>Это я</h1></center>
+    <div class="me_img">
 <img src="{{url_for('static', filename='img/me.jpg')}}"  /></div>
-<div class="me_photo">
     <center><h2>Кузина Лиза</h2>
-<h2>Средний балл: 5</h2></center>
+<h2>Средний балл: 5</h2>
 <div class="table">
     <table>
-        <div class="th">
         <tr>
                 <th>Дисциплина</th>
                 <th>Оценка</th>
         </tr>
-        </div>
-        <div class="td">
         <tr>
                 <td>Математика</td>
                 <td>отлично</td>
@@ -42,9 +38,8 @@
                 <td>Философия</td>
                 <td>отлично</td>
             </tr>
-        </div>
     </table>
 </div>
 </center>
-</div>
+
 {% endblock %}
