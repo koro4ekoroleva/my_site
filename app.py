@@ -52,6 +52,13 @@ def about():
 def spagetti():
     return render_template('spagetti.html', menu=menu, title='Спагетти')
 
+@app.route('/lasagna/')
+def lasagna():
+    return render_template("lasagna.html", menu=menu, title='Лазанья с мясом')
+
+@app.route('/pancakes/')
+def pancakes():
+    return render_template("pancakes.html", menu=menu, title='Тонкие блины')
 
 @app.route('/me/')
 def me():
