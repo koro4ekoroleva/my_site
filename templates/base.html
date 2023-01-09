@@ -15,7 +15,7 @@
           <img src="{{url_for('static', filename='img/logo.png')}}" hspace="5"/>
     </div>
     {% for m in menu %}
-    <li><a href="{{url_for(m.url)}}">{{m.name}}</a></li>
+    <li><a href="{{url_for(m.url)}}">{{m.title}}</a></li>
     {% endfor %}
 </ul>
 {% endblock mainmenu -%}

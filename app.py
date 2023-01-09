@@ -9,7 +9,6 @@ from config import Config
 menu = [{"title": 'Главная', "url": "hello"},
         {"title": 'Помощь', "url": "help"},
         {"title": "О программе", "url": "about"},
-        {"title": "Nyan Cat", "url": "NyanCat"},
         {"title": "Разработчик", "url": "me"}]
 
 app = Flask(__name__)
@@ -30,7 +29,7 @@ def close_db(error):
 
 @app.route('/')
 def hello():
-    return render_template('home.html', menu=menu)
+    return render_template('home.html', menu=menu, title='Главная')
 
 
 @app.route('/help/')
@@ -46,17 +45,17 @@ def NyanCat():
 
 @app.route('/about/')
 def about():
-    return render_template('about.html', title="about", menu=menu)
+    return render_template('about.html', title="О сайте", menu=menu)
 
 
 @app.route('/spagetti/')
 def spagetti():
-    return render_template('spagetti.html', menu=menu)
+    return render_template('spagetti.html', menu=menu, title='Спагетти')
 
 
 @app.route('/me/')
 def me():
-    return render_template('me.html', menu=menu)
+    return render_template('me.html', menu=menu, title='Я')
 
 
 @app.route('/index_db/')

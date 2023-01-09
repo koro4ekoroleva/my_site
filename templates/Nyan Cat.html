@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <title>Nyan Cat</title>
     <style>
-    body{background: url(https://64.media.tumblr.com/230e7e2aed827d21f8acf7f31442f826/tumblr_ogm3yfiTbk1u7i9feo1_1280.gif);
-    color: white;
-    }
+
     @font-face {
         font-family: "Leokadia";
         font-style: normal;
@@ -16,97 +14,56 @@
             {url_for('static', filename='fonts/leokadia.ttf')} format("ttf"),
             {url_for('static', filename='fonts/leokadia.eot')} format("eot"),
     }
-    header {
-        font-family: Leokadia, Georgia;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        background: #00004d;
-        height: 50px;
-    }
-    .menu {
-        flex-grow: 1;
-    }
+    ul.mainmenu {
+    font-family: leokadia, Georgia;
+	list-style: none;
+	background: #00004d;
+	height: 60px;
+	margin: 0;
+	padding: 0;
+	color: #9D9DD9;
+	font-size: 20px;
+	overflow: hidden;
+}
+ul.mainmenu li {
+	float: left;
+	margin: 25px 25px 0px 0px;
+}
+ul.mainmenu li.last {float: right;}
+
+ul.mainmenu li a {
+	color: #FFF1BD;
+	text-decoration: none;
+	padding: 8px 10px;
+    letter-spacing: 0.27em;
+}
+ul.mainmenu li a:hover {
+	color: #9D9DD9;
+}
     .logo {
-        margin-right: 30px;
+        float: left;
+        margin: 10px 25px 0px 0px;
+        object-fit:fill;
     }
-    .menu ul {
-      display: flex;
-      flex-flow: row nowrap;
-      margin: 2px 0 0;
-      padding: 0;
-      font-size: 16px;
-      line-height: 18px;
-      list-style: none;
-    }
-    .menu li {
-      margin-right: 20px;
-    }
-    .menu li:last-child {
-      margin-right: 0;
-    }
-    .menu a,
-    .menu .active {
-      display: block;
-      padding: 8px 10px;
-      letter-spacing: 0.27em;
-    }
-    .menu a {
-      color: #9D9DD9;
-      text-decoration: none;
-    }
-    .menu .active {
-      padding-right: calc(10px - 0.27em);
-      color: #00004d;
-      background-color: #9D9DD9;
-      border-radius: 8px;
-    }
+
     </style>
 </head>
 <body link="white" vlink="white">
-<header>
+{% block content -%}
+{%- block mainmenu -%}
+<ul class="mainmenu">
     <div class="logo">
           <img src="{{url_for('static', filename='img/nyan logo.png')}}" hspace="5"/>
     </div>
-    <nav class="menu">
-    <ul>
-        {% for m in menu %}
-            <li><a href="{{url_for(m.url)}}">{{m.name}}</a></li>
-        {% endfor %}
-    </ul>
-    </nav>
-</header>
-<center><h1><b>Nyan Cat</b></h1>
-<img src="https://wiki.soiro.ru/images/Nyan-cat-png-transparent-images-175332-9145060.gif" HEIGHT = 400 WIDTH = 875></center>
-<p>«Nyan Cat» — видеоролик, загруженный на видеохостинг YouTube в апреле 2011 года и ставший популярным интернет-мемом.
-    Ролик содержит мотивы из японской поп-музыки и движущийся рисунок кошки с телом из печенья «Поп-тартс», летящей по
-    космосу и оставляющей за собой шлейф из радуги. Видео заняло пятое место по количеству просмотров в 2011 году.</p>
-<p>Создателем интернет-мема стал 25-летний Кристофер Торрес из Далласа, штат Техас. Прототипом послужил кот создателя
-    анимации — Марти, который скончался от инфекционного перитонита 1 ноября 2012 года. В конце 2000-х годов Кристофер
-    начал рисовать комиксы про приключения животного. Специально для их публикации он создал свой личный сайт
-    «LOL-Comics». В 2011 году в разных уголках Мира происходило множество катастроф. Популярные в то время личности
-    делали пожертвования для организации «Красный Крест», и Торрес тоже решил присоединиться.</p>
-<p>В один момент художник запустил прямую трансляцию, благодаря которой хотел спросить у своих друзей, что ему
-    нарисовать. Однако на неё никто так и не пришёл. В итоге Торрес просто начал придумывать случайные слова: «кот»,
-    «радуга» и «выпечка на завтрак». Через время первый вариант рисунка был готов: на тот момент, это был просто кот,
-    у которого вместо туловища было печенье «Поп-тартс» и он не был пиксельным. В этот день автор получил 100 долларов
-    чаевых. Остальная часть рисунка приснилась Торресу во сне: анимированный пикселизированный вариант его рисунка
-    летает в космосе. Тогда он проснулся в полночь и за шесть часов нарисовал новую версию. 2 апреля 2011 года
-    анимированный GIF-рисунок кошки был размещён Кристофером на «LOL-Comics» и был положительно воспринят пользователями.</p>
-<p>Оригинальная песня «Nyanyanyanyanyanyanya!», исполненная виртуальным вокалоидом, была загружена пользователем
-    Daniwell-P на японский видеохостинг Nico Nico Douga. Японское «ня» (にゃ) соответствует кошачьему звукоподражанию
-    «мяу». На момент волны популярности «Nyan Cat», она уже имела большую популярность в Интернете. Пользовательница
-    YouTube saraj00n объединила рисунок с версией песни «Nyanyanyanyanyanyanya!» в исполнении утаулоида Момоне Момо
-    и под названием «Nyan Cat» загрузила его на видеохостинг 5 апреля 2011 года, через три дня после того, как
-    Торрес выложил свою анимацию в интернет.</p><p></p>
-<p>Видео быстро распространилось по самым популярным платформам в Сети. Вскоре после этого Nyan Cat появился в рекламе
-    Sprint, музыку из GIF-рисунка совмещали с клипом песни группы Slipknot «Psychosocial», пользователи Интернета начали
-    создавать множество онлайн-игр по теме мема. Он также побудил многих к созданию множества других интернет-мемов.
-    Кошка перевоплощалась в собак, единорогов, бананов, Lego, веджимайт, Бэтмена, Супер Марио, Гомера Симпсона,
-    Леди Гагу, Гая Фокса, Гитлера и других.</p>
-<p>Существует даже <A HREF="https://www.nyan.cat/">сайт</A>, посвящённый Nyan Cat. На сайте воспроизводится анимация
-    Nyan Cat и отображается время, проведённое пользователем на сайте. Ну и куда же без характерной музыки. </p>
+    {% for m in menu %}
+    <li><a href="{{url_for(m.url)}}">{{m.name}}</a></li>
+    {% endfor %}
 
+</ul>
+{% endblock mainmenu -%}
+
+{% endblock -%}
+
+<center><img src="{{url_for('static', filename='img/tenor.gif')}}" ></center>
 </body>
 </html>
