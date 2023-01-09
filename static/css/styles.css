@@ -69,6 +69,7 @@ ul.mainmenu li a:hover {
     .me_img {
     display: flex;
     float: left;
+    height: 80%;
     }
 
     .table {
